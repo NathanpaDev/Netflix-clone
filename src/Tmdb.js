@@ -23,7 +23,7 @@ const apiConfig = {
     return [
       {
         slug: "originals",
-        title: "Originais Netflix",
+        title: "Originais da Netflix",
         item: [await basicFetch(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)],
       },
       {
