@@ -18,21 +18,29 @@ const App = () => {
 
       // Pegando o filme em destaque
       let originals = list.filter((i) => i.slug === "originals");
-      let randomChosen = Math.floor(
-        Math.random() * (originals[0].items.results.length - 1)
-      );
-      let chosen = originals[0].items.results[randomChosen];
+      if (
+        originals.length > 0 &&
+        originals[0].item &&
+        originals[0].item.length > 0 &&
+        originals[0].item[0].results &&
+        originals[0].item[0].results.length > 0
+      ) {
+        let results = originals[0].item[0].results;
+        let randomChosen = Math.floor(Math.random() * results.length);
+        let chosen = results[randomChosen];
+        setFeaturedData(chosen);
+        let chosenInfo = await Tmdb.getMovieInfo(chosen.id, "tv");
+        setFeaturedData(chosenInfo);
+
+      
+      }
     };
     loadAll();
   }, []);
 
-  console.log("movieList:", movieList);
-
-  return (
+    return (
     <div className="page">
-      <header>
-        <h1>SpeedFlix</h1>
-      </header>
+    
       {featuredData && <FeaturedMovie item={featuredData} />}
       <main>
         <section className="lists">
