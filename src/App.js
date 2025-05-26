@@ -4,7 +4,7 @@ import Tmdb from "./Tmdb";
 import MovieRow from "./components/MovieRow";
 import "./App.css";
 import FeaturedMovie from "./components/FeaturedMovie";
-
+import Header from "./components/Header";
 
 const App = () => {
   const [movieList, setMovieList] = useState([]);
@@ -31,16 +31,15 @@ const App = () => {
         setFeaturedData(chosen);
         let chosenInfo = await Tmdb.getMovieInfo(chosen.id, "tv");
         setFeaturedData(chosenInfo);
-
-      
       }
     };
     loadAll();
   }, []);
 
-    return (
+  return (
     <div className="page">
-    
+      <Header />
+
       {featuredData && <FeaturedMovie item={featuredData} />}
       <main>
         <section className="lists">
