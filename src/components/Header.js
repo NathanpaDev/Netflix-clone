@@ -1,13 +1,13 @@
 import React from "react";
 import "./Header.css";
-import netflixLogo from "../assets/Netflix_logo.svg";
 
-const Header = () => {
+
+const Header = ({black}) => {
   return (
-    <header>
+    <header className={black ? "black" : ""}>
       <div className="header--logo">
         <a href="/">
-          <img src={netflixLogo} alt="Netflix" />
+          <img src="https://pt.m.wikipedia.org/wiki/Ficheiro:Netflix_2015_logo.svg" alt="My Flix" title="My Flix" />
         </a>
       </div>
       
