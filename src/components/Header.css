@@ -17,16 +17,12 @@ header {
 header.black {
     background-color: #141414;
 } 
-
-.header--logo {
-    height: 30px;
-
-}
-
 .header--logo img {
-  width: 120px;
+  width: 130px;
   height: auto;
   display: block;
+  margin-top: 10px;
+  
 }
 .header--user img {
   width: 40px;

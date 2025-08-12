@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import myflixLogo from "../assets/myflix2.png"; // ajuste o caminho se necessário
 
 
 const Header = ({black}) => {
@@ -7,7 +8,7 @@ const Header = ({black}) => {
     <header className={black ? "black" : ""}>
       <div className="header--logo">
         <a href="/">
-          <img src="https://pt.m.wikipedia.org/wiki/Ficheiro:Netflix_2015_logo.svg" alt="My Flix" title="My Flix" />
+          <img src={myflixLogo} alt="My Flix" title="My Flix" />
         </a>
       </div>
       
