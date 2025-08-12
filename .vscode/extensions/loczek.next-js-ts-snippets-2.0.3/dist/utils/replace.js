@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.thirdReplaceMd = exports.secondReplaceMd = exports.firstReplaceMd = exports.fileNameReplaceMd = exports.fileNameCapitalizedReplaceMd = exports.thirdReplace = exports.secondReplace = exports.firstReplace = exports.fileNameReplace = exports.fileNameCapitalizedReplace = void 0;
+exports.fileNameCapitalizedReplace = "${1:${TM_FILENAME_BASE/(.)/${1:/upcase}/}}";
+exports.fileNameReplace = "";
+exports.firstReplace = "${1}";
+exports.secondReplace = "${2}";
+exports.thirdReplace = "${3}";
+exports.fileNameCapitalizedReplaceMd = "FileName";
+exports.fileNameReplaceMd = "filename";
+exports.firstReplaceMd = "";
+exports.secondReplaceMd = "";
+exports.thirdReplaceMd = "";

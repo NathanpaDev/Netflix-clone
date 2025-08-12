@@ -1,0 +1,29 @@
+{
+  "nextApi": {
+    "prefix": "napi",
+    "body": [
+      "import type { NextApiRequest, NextApiResponse } from 'next'",
+      "",
+      "interface Data {}",
+      "",
+      "export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {",
+      "  ${1}",
+      "}"
+    ]
+  },
+  "nextMiddleware": {
+    "prefix": "nmid",
+    "body": [
+      "import { NextResponse } from 'next/server'",
+      "import type { NextRequest } from 'next/server'",
+      "",
+      "export async function middleware(request: NextRequest) {",
+      "  ${1}",
+      "}",
+      "",
+      "export const config = {",
+      "  matcher: '/about/:path*',",
+      "}"
+    ]
+  }
+}

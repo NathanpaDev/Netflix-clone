@@ -1,0 +1,161 @@
+{
+  "nextPage": {
+    "prefix": "np",
+    "body": [
+      "import { NextPage } from 'next'",
+      "",
+      "interface Props {}",
+      "",
+      "const ${1:${TM_FILENAME_BASE/(.)/${1:/upcase}/}}: NextPage<Props> = ({}) => {",
+      "  return <div>${2}</div>",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE/(.)/${1:/upcase}/}}"
+    ]
+  },
+  "nextPageServerSideProps": {
+    "prefix": "npssp",
+    "body": [
+      "import { NextPage, GetServerSideProps } from 'next'",
+      "",
+      "interface Props {}",
+      "",
+      "const ${1:${TM_FILENAME_BASE/(.)/${1:/upcase}/}}: NextPage<Props> = ({}) => {",
+      "  return <div>${2}</div>",
+      "}",
+      "",
+      "export const getServerSideProps: GetServerSideProps = async (ctx) => {",
+      "  return {",
+      "    props: {}",
+      "  }",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE/(.)/${1:/upcase}/}}"
+    ]
+  },
+  "nextPageStaticProps": {
+    "prefix": "npsp",
+    "body": [
+      "import { NextPage, GetStaticProps } from 'next'",
+      "",
+      "interface Props {}",
+      "",
+      "const ${1:${TM_FILENAME_BASE/(.)/${1:/upcase}/}}: NextPage<Props> = ({}) => {",
+      "  return <div>${2}</div>",
+      "}",
+      "",
+      "export const getStaticProps: GetStaticProps = async (ctx) => {",
+      "  return {",
+      "    props: {},",
+      "  }",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE/(.)/${1:/upcase}/}}"
+    ]
+  },
+  "nextPageStaticPaths": {
+    "prefix": "npspth",
+    "body": [
+      "import { NextPage, GetStaticPaths } from 'next'",
+      "",
+      "interface Props {}",
+      "",
+      "const ${1:${TM_FILENAME_BASE/(.)/${1:/upcase}/}}: NextPage<Props> = ({}) => {",
+      "  return <div>${2}</div>",
+      "}",
+      "",
+      "export const getStaticPaths: GetStaticPaths = async () => {",
+      "  return {",
+      "    paths: [],",
+      "    fallback: false,",
+      "  }",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE/(.)/${1:/upcase}/}}"
+    ]
+  },
+  "nextServerSideProps": {
+    "prefix": "nssp",
+    "body": [
+      "export const getServerSideProps: GetServerSideProps = async (ctx) => {",
+      "  return {",
+      "    props: {}",
+      "  }",
+      "}"
+    ]
+  },
+  "nextStaticProps": {
+    "prefix": "nsp",
+    "body": [
+      "export const getStaticProps: GetStaticProps = async (ctx) => {",
+      "  return {",
+      "    props: {},",
+      "  }",
+      "}"
+    ]
+  },
+  "nextStaticPaths": {
+    "prefix": "nspth",
+    "body": [
+      "export const getStaticPaths: GetStaticPaths = async () => {",
+      "  return {",
+      "    paths: [],",
+      "    fallback: false,",
+      "  }",
+      "}"
+    ]
+  },
+  "nextInitialProps": {
+    "prefix": "nip",
+    "body": [
+      "${1:${TM_FILENAME_BASE/(.)/${1:/upcase}/}}.getInitialProps = async (ctx) => {",
+      "  return {",
+      "    ${2}",
+      "  }",
+      "}"
+    ]
+  },
+  "nextImage": {
+    "prefix": "nimg",
+    "body": [
+      "<Image src=\"${1}\" alt=\"${2}\" />"
+    ]
+  },
+  "nextApp": {
+    "prefix": "napp",
+    "body": [
+      "import type { AppProps } from 'next/app'",
+      "",
+      "export default function MyApp({ Component, pageProps }: AppProps) {",
+      "  return <Component {...pageProps} />",
+      "}"
+    ]
+  },
+  "nextDocument": {
+    "prefix": "ndoc",
+    "body": [
+      "import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'",
+      "",
+      "class MyDocument extends Document {",
+      "  static async getInitialProps(ctx: DocumentContext) {",
+      "    const initialProps = await Document.getInitialProps(ctx)",
+      "    return { ...initialProps }",
+      "  }",
+      "",
+      "  render() {",
+      "    return (",
+      "      <Html>",
+      "        <Head />",
+      "        <body>",
+      "          <Main />",
+      "          <NextScript />",
+      "        </body>",
+      "      </Html>",
+      "    );",
+      "  }",
+      "}",
+      "",
+      "export default MyDocument"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+[core]
+	editor = \"C:\\Users\\Nathan\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
+[user]
+	email = nathanpadev@gmail.com
+	name = Natanael Romero de Assunção
+[color]
+	ui = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

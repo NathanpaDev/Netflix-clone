@@ -1,0 +1,10 @@
+export declare const fileNameCapitalizedReplace = "${1:${TM_FILENAME_BASE/(.)/${1:/upcase}/}}";
+export declare const fileNameReplace = "";
+export declare const firstReplace = "${1}";
+export declare const secondReplace = "${2}";
+export declare const thirdReplace = "${3}";
+export declare const fileNameCapitalizedReplaceMd = "FileName";
+export declare const fileNameReplaceMd = "filename";
+export declare const firstReplaceMd = "";
+export declare const secondReplaceMd = "";
+export declare const thirdReplaceMd = "";
